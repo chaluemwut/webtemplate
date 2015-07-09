@@ -16,6 +16,13 @@ public class LoginAPI {
 	@Autowired
 	private UsersRepository repository;
 
+	/**
+	 * 
+	 * @param userName
+	 * @param passWord
+	 * @return
+	 * url call http://localhost:9090/webtemplate/user/login?username=demo&password=demo
+	 */
 	@RequestMapping(value = "login")
 	@ResponseBody
 	public ResponseData userLogin(@RequestParam(value = "username") String userName,

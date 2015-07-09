@@ -3,6 +3,11 @@ webtemplate เป็น template สำหรับพัฒนา web applicat
 
 ## การเริ่มทำงาน
 สามารถเริ่มใช้งานได้โดยใช้ git clone https://github.com/chaluemwut/webtemplate.git
+สิ่งที่ต้องมี
++ลง mongo db
++eclipse
++jdk 8
++tomcat 8
 
 # Model
 webtemplate สามารถต่อกับ MongoDB โดยใช้ Spring Data โดยมีขั้นตอนดังนี้
