@@ -10,7 +10,7 @@
 	<form action="action">
 		<center>
 			<h2>Hello World</h2>
-			<h2>${message} ${name}</h2>
+			<h2>${message}</h2>
 			<ul>
 				<li>User name: <input name="username" type="text" /></li>
 				<li>Pass word: <input name="password" type="password" /></li>

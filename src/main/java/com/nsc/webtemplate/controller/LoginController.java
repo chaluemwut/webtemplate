@@ -17,7 +17,7 @@ public class LoginController {
 
 	@RequestMapping("/")
 	public ModelAndView mainPage() {
-//		repository.save(new Users("demo", "demo", "admin"));
+		// repository.save(new Users("demo", "demo", "admin"));
 		ModelAndView mv = new ModelAndView("login");
 		mv.addObject("message", "Welcome to Spring MVC!");
 		return mv;
@@ -33,7 +33,7 @@ public class LoginController {
 			return loginView;
 		} else {
 			ModelAndView landing = new ModelAndView("landing");
-			 landing.addObject("role", user.getRoleName());
+			landing.addObject("role", user.getRoleName());
 			return landing;
 		}
 
