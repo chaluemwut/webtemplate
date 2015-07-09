@@ -1,7 +1,5 @@
 package com.nsc.webtemplate.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +17,7 @@ public class LoginController {
 
 	@RequestMapping("/")
 	public ModelAndView mainPage() {
-		// repository.save(new Users("demo", "demo"));
-
+//		repository.save(new Users("demo", "demo", "admin"));
 		ModelAndView mv = new ModelAndView("login");
 		mv.addObject("message", "Welcome to Spring MVC!");
 		return mv;
@@ -36,6 +33,7 @@ public class LoginController {
 			return loginView;
 		} else {
 			ModelAndView landing = new ModelAndView("landing");
+			 landing.addObject("role", user.getRoleName());
 			return landing;
 		}
 
