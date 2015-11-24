@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.nsc.webtemplate.model.Users;
 import com.nsc.webtemplate.model.UsersRepository;
 
 @Controller
@@ -23,19 +22,4 @@ public class LoginController {
 		return mv;
 	}
 
-	@RequestMapping("/action")
-	public ModelAndView loginAction(@RequestParam(value = "username") String userName,
-			@RequestParam(value = "password") String passWord) {
-		Users user = repository.findByUserNameAndPassWord(userName, passWord);
-		if (user == null) {
-			ModelAndView loginView = new ModelAndView("login");
-			loginView.addObject("message", "User does not exist");
-			return loginView;
-		} else {
-			ModelAndView landing = new ModelAndView("landing");
-			landing.addObject("role", user.getRoleName());
-			return landing;
-		}
-
-	}
 }

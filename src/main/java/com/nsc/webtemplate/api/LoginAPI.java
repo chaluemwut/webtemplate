@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.nsc.webtemplate.model.Users;
 import com.nsc.webtemplate.model.UsersRepository;
+import com.nsc.webtemplate.model.table.Users;
 
 @Controller
 @RequestMapping("/user")

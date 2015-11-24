@@ -16,38 +16,34 @@
 	rel="stylesheet">
 <script type="text/javascript" src="<c:url value="/resources/js/jquery-2.1.4.min.js" />"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
-
 </head>
-<body role="document">
-	<jsp:include page="menu.jsp"></jsp:include>
-
+<body>
+	<jsp:include page="../menu.jsp"></jsp:include>
 	<div class="container" style="position: relative; padding-top: 70px;">
-		<div class="page-header">
-			<h1>รายการส่งของ</h1>
-		</div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>ร้านค้า</th>
-					<th>สินค้า</th>
-					<th>จำนวนการขาย</th>
-					<th>รถส่ง</th>
-					<th>วันที่ส่ง</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="display" items="${displays}">
-					<tr>
-						<td>${display.customerName}</td>
-						<td>${display.itemName}</td>
-						<td>${display.numberOfSale}</td>
-						<td>${display.truckName}</td>
-						<td>${display.dateCheckIn}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+		<p class="navbar-text">การเพิ่มลูกค้า</p>
+		<form action="<%=request.getContextPath()%>/product/save">
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" name="csItem"
+					placeholder=สินค้า>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" name="csItemType"
+					placeholder=ประเภท>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" name="csStock"
+					placeholder=stock>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" name="csStock_HIS"
+					placeholder=stock HIS>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" name="csPreOrder"
+					placeholder=pre order>
+			</div>
+			<input type="submit" class="btn btn-primary" value="บันทึก" />
+		</form>
 	</div>
-
 </body>
 </html>

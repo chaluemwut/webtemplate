@@ -1,4 +1,4 @@
-package com.nsc.webtemplate.model;
+package com.nsc.webtemplate.model.table;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
